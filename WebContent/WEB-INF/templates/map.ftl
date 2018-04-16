@@ -38,7 +38,30 @@
             };
             //new map
             var map = new google.maps.Map(document.getElementById('map'),options);
-
+            
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      // This requires the Visualization library. Include the libraries=visualization
+      // parameter when you first load the API.
+            //var heatmap = new google.maps.visualization.HeatmapLayer({
+            //    data: getMets(),
+            //    map: map
+            //        });
+            //function getMets(){
+            //       var returnMe = [];
+            //       for(int i=0;i<markers.length;i++){
+            //       var grablat = markers[i].getPosition().lat();
+            //       var grablng = markers[i].getPostion().lng();
+            //       myLatLng = new google.maps.LatLng(
+            //              {lat: grablat
+            //              lng: grablng}   );
+            //       }
+            //      returnMe.push(myLatLng);
+            //  }
+            // function toggleHeatmap() { //i would suggest mapping this to a button?
+            //   heatmap.setMap(heatmap.getMap() ? null : map);
+            // }
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+            
             //Loop through the marker array
             for(var i = 0; i< markers.length; i++){
                 addMarker(markers[i]);
